@@ -107,7 +107,7 @@ const Cards = () => {
             {/* Facebook SVG */}
           </a>
           <a
-            href="https://www.instagram.com/arsalan.gym"
+            href="https://www.instagram.com/ars_lan_?igsh=eGs1MzR5aTVlOHZs"
             className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-pink-500 to-red-600 text-white rounded-full shadow-md hover:scale-110 hover:shadow-lg transition-transform duration-300"
             aria-label="Instagram"
           >

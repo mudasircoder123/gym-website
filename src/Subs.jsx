@@ -4,7 +4,7 @@ import Nav from './Nav';
 const Pricing = () => {
   return (
     <>
-      <Nav />
+      
       <div className="pricing-section py-16">
         <div className="text-center ">
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-wide">Unleash Your Power with Our Plans</h2>

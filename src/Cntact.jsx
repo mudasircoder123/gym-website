@@ -2,34 +2,53 @@ import React, { useState } from "react";
 import img from './Assets/bg.jpg';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import HeroSection from "./Hero";
-import Program from "./Program";
-import About from "./About";
+import emailjs from 'emailjs-com'; // Import EmailJS
+
 import Nav from "./Nav";
+
 const Contact = () => {
   
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const EMAILJS_SERVICE_ID = "service_hb135uh";
+const EMAILJS_TEMPLATE_ID = "template_ohjp03p";
+const EMAILJS_USER_ID = "mD2sKo8rm8Qys2oEs";
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Validate form fields
     if (!name || !email || !message) {
       toast.error("Please fill in all fields!");
     } else {
-      toast.success("Message sent! We'll get back to you soon.");
-      setName("");
-      setEmail("");
-      setMessage("");
+      // Send email via EmailJS
+      const templateParams = {
+        name: name,
+        email: email,
+        message: message,
+      };
+
+      // Replace 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', and 'YOUR_USER_ID' with your actual EmailJS credentials
+      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID , templateParams,EMAILJS_USER_ID)
+        .then((response) => {
+          toast.success("Message sent! We'll get back to you soon.");
+          setName("");
+          setEmail("");
+          setMessage("");
+        })
+        .catch((error) => {
+          toast.error("Failed to send message. Please try again.");
+        });
     }
   };
 
   return (
   <>
-  <Nav/>
+    <Nav />
     <section className="bg-gray-100">
       {/* Header Section */}
-      <div className="relative w-full h-96 mt-12">
+      <div className="relative w-full h-96 ">
         <img
           className="absolute h-full w-full object-cover object-center"
           src={img}
@@ -47,7 +66,7 @@ const Contact = () => {
       </div>
 
       {/* Main Content Section */}
-      <div className="-mt-24 mb-12 px-6 lg:px-16">
+      <div className="-mt-24 mb-12 px-6 lg:px-16 mt-5">
         <div className="container mx-auto">
           <div className="py-12 flex flex-col lg:flex-row justify-between items-center rounded-xl bg-white shadow-lg">
             {/* Contact Information */}
@@ -123,12 +142,12 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="w-full lg:w-1/2 p-6 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl">
+            <div className="w-full lg:w-1/2 p-6 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl ">
               <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <input
                   type="text"
-                  name="name"
+                  name='name'
                   className="w-full h-12 px-4 rounded-md border-none focus:ring-2 focus:ring-indigo-300"
                   placeholder="Your Name"
                   value={name}
@@ -136,7 +155,7 @@ const Contact = () => {
                 />
                 <input
                   type="email"
-                  name="email"
+                  name=''
                   className="w-full h-12 px-4 rounded-md border-none focus:ring-2 focus:ring-indigo-300"
                   placeholder="Your Email"
                   value={email}
@@ -165,8 +184,10 @@ const Contact = () => {
       {/* Toast Notifications */}
       <ToastContainer />
     </section>
-    </>
+  </>
   );
 };
 
 export default Contact;
+
+

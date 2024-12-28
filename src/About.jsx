@@ -6,13 +6,13 @@ import img1 from './Assets/girI.jpg';
 import Program from "./Program";
 import HeroSection from "./Hero";
 import Contact from "./Cntact";
-import Nav from "./Nav";
+
 const About = () => {
   
   return (
     <>
-  <Nav/>
-      <div className="bg-gradient-to-br from-gray-900 to-indigo-800 text-gray-50">
+ 
+      <div className="bg-gradient-to-br from-gray-900 to-indigo-800 text-gray-50 ">
         {/* Hero Section */}
         <section className="text-white py-20">
           <div className="container mx-auto px-6 text-center">

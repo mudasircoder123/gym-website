@@ -11,7 +11,7 @@ function GymDetailsPage() {
     navigate('/contact');  // Navigate to a new route
   };
   return (
-    <div className="min-h-screen bg-black text-white pb-12 pt-10">
+    <div className="min-h-screen bg-black text-white pb-10 pt-15 mt-14">
 
       {/* Hero Section */}
       <section className="relative flex flex-col items-center max-w-screen-xl px-4 mx-auto md:flex-row sm:px-6 p-8">

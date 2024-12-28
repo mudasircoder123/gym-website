@@ -16,7 +16,7 @@ const Nav = () => {
 
   return (
     <>
-      <header className="bg-gradient-to-r from-black to-gray-800 text-white fixed top-0 left-0 w-full z-50 shadow-lg h-26 rounded-lg">
+      <header className="bg-slate-400 text-white fixed top-0 left-0 w-full z-50 shadow-lg h-26 rounded-lg">
         <nav className="flex justify-between items-center p-4 max-w-7xl mx-auto">
           {/* Logo */}
           <div className="text-4xl font-bold text-teal-400 font-sans tracking-wider">
@@ -58,5 +58,11 @@ const Nav = () => {
 };
 
 export default Nav;
+
+
+
+
+
+
 
 

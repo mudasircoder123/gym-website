@@ -3,12 +3,12 @@ import img1 from './Assets/cardio.jpg';
 import img2 from './Assets/gym.jpg';
 import img3 from './Assets/weightLoss.jpg';
 import BMICalculator from "./Bmi";
-import Nav from "./Nav";
+
 import Pricing from "./Subs";
 const Program = () => {
   return (
     <>
-  <Nav/>
+ 
       <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-teal-600 text-center mt-5 mb-12 animate__animated animate__fadeIn">
         Our Programs: Unlock Your Full Potential
       </h1>

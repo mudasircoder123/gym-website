@@ -2,24 +2,37 @@ import React, { useState } from 'react';
 
 const BMICalculator = () => {
   const [weight, setWeight] = useState('');
-  const [height, setHeight] = useState('');
+  const [feet, setFeet] = useState('');
+  const [inches, setInches] = useState('');
   const [gender, setGender] = useState('male');
   const [bmi, setBmi] = useState(null);
   const [category, setCategory] = useState('');
 
   const calculateBMI = () => {
-    const bmiValue = (weight / (height * height)).toFixed(1);
+    if (!weight || !feet || !inches) {
+      alert("Please enter all fields.");
+      return;
+    }
+
+    // Convert height from feet and inches to meters
+    const heightInMeters = (parseFloat(feet) * 0.3048) + (parseFloat(inches) * 0.0254);
+    
+    // Calculate BMI
+    const bmiValue = (weight / (heightInMeters * heightInMeters)).toFixed(1);
     setBmi(bmiValue);
 
+    // Determine the BMI category
+    let categoryValue = '';
     if (bmiValue < 18.5) {
-      setCategory('Underweight');
+      categoryValue = 'Underweight';
     } else if (bmiValue >= 18.5 && bmiValue < 24.9) {
-      setCategory('Normal weight');
+      categoryValue = 'Normal weight';
     } else if (bmiValue >= 25 && bmiValue < 29.9) {
-      setCategory('Overweight');
+      categoryValue = 'Overweight';
     } else {
-      setCategory('Obesity');
+      categoryValue = 'Obesity';
     }
+    setCategory(categoryValue);
   };
 
   return (
@@ -44,17 +57,30 @@ const BMICalculator = () => {
 
       <div className="mb-4">
         <label className="block text-white font-bold mb-2" htmlFor="height">
-          Height (meters)
+          Height (Feet and Inches)
         </label>
-        <input
-          type="number"
-          step="0.01"
-          id="height"
-          value={height}
-          onChange={(e) => setHeight(e.target.value)}
-          className="w-full p-4 border-2 border-gray-300 rounded-lg text-xl"
-          placeholder="Enter your height"
-        />
+        <div className="flex space-x-4">
+          <div className="w-1/2">
+            <input
+              type="number"
+              id="feet"
+              value={feet}
+              onChange={(e) => setFeet(e.target.value)}
+              className="w-full p-4 border-2 border-gray-300 rounded-lg text-xl"
+              placeholder="Feet"
+            />
+          </div>
+          <div className="w-1/2">
+            <input
+              type="number"
+              id="inches"
+              value={inches}
+              onChange={(e) => setInches(e.target.value)}
+              className="w-full p-4 border-2 border-gray-300 rounded-lg text-xl"
+              placeholder="Inches"
+            />
+          </div>
+        </div>
       </div>
 
       <div className="mb-4">
@@ -93,5 +119,6 @@ const BMICalculator = () => {
 };
 
 export default BMICalculator;
+
 
 
