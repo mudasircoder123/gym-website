@@ -8,16 +8,16 @@ import HeroSection from "./Hero";
 import Contact from "./Cntact";
 
 const About = () => {
-  
   return (
     <>
- 
-      <div className="bg-gradient-to-br from-gray-900 to-indigo-800 text-gray-50 ">
+      <div className="bg-gradient-to-br from-gray-900 to-indigo-800 text-gray-50">
         {/* Hero Section */}
         <section className="text-white py-20">
-          <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-yellow-400 mb-4">About Us</h1>
-            <p className="mt-4 text-lg md:text-xl font-semibold text-yellow-300">
+          <div className="container mx-auto px-6 md:px-12 text-center mt-12">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-yellow-400 mb-6">
+              About Us
+            </h1>
+            <p className="mt-4 text-lg sm:text-xl md:text-2xl font-semibold text-yellow-300">
               Empowering fitness enthusiasts since 2018.
             </p>
           </div>
@@ -25,20 +25,20 @@ const About = () => {
 
         {/* Blogs Section */}
         <section className="pt-20 lg:pt-[120px] pb-10 lg:pb-20">
-          <div className="container">
+          <div className="container mx-auto px-6 md:px-12">
             <div className="flex flex-wrap justify-center -mx-4">
               <div className="w-full px-4">
                 <div className="text-center mx-auto mb-[60px] lg:mb-20 max-w-[510px]">
                   <h2 className="font-extrabold text-3xl sm:text-4xl md:text-[40px] text-white mb-4 underline underline-offset-4">
                     Our Blogs
                   </h2>
-                  <p className="text-4xl text-body-color font-sans text-white">
+                  <p className="text-xl md:text-2xl text-body-color font-sans text-white">
                     "Stay Inspired: Insights, Tips, and Stories to Elevate Your Fitness Journey"
                   </p>
                 </div>
               </div>
             </div>
-            <div className="flex flex-wrap -mx-4">
+            <div className="flex flex-wrap justify-center gap-8">
               {[{
                   title: 'Fat burning cardio workout to keep yourself in shape',
                   description:
@@ -58,7 +58,7 @@ const About = () => {
                   imgSrc: img3,
                 },
               ].map((blog, index) => (
-                <div className="w-full md:w-1/2 lg:w-1/3 px-4" key={index}>
+                <div className="w-full sm:w-1/2 lg:w-1/3 px-4" key={index}>
                   <div className="max-w-[370px] mx-auto mb-10">
                     <div className="rounded overflow-hidden mb-8 shadow-lg hover:scale-105 transition-all duration-300">
                       <img
@@ -87,11 +87,13 @@ const About = () => {
           </div>
         </section>
       </div>
+
       <h1 className="text-4xl font-extrabold text-center text-white mt-8">
         Meet Our Expert Coaches
       </h1>
-      <Cards />
-      
+      <div className="container mx-auto px-6 md:px-12 mt-8">
+        <Cards />
+      </div>
     </>
   );
 };

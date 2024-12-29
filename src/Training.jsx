@@ -18,7 +18,7 @@ function GymDetailsPage() {
         {/* Left Section (Text Content) */}
         <div className="flex items-center py-5 md:w-1/2 md:pb-20 md:pt-10 md:pr-10">
           <div className="text-left">
-            <h2 className="text-4xl font-extrabold leading-10 tracking-tight text-white sm:text-5xl sm:leading-none md:text-6xl">
+            <h2 className="text-4xl font-extrabold leading-10 tracking-tight text-white sm:text-5xl sm:leading-none md:text-6xl mt-5">
               Start Your Training with 
               <span className="font-bold text-red-500">Shredded</span>
             </h2>

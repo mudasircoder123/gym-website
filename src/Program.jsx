@@ -3,18 +3,18 @@ import img1 from './Assets/cardio.jpg';
 import img2 from './Assets/gym.jpg';
 import img3 from './Assets/weightLoss.jpg';
 import BMICalculator from "./Bmi";
-
 import Pricing from "./Subs";
+
 const Program = () => {
   return (
     <>
- 
-      <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-teal-600 text-center mt-5 mb-12 animate__animated animate__fadeIn">
-        Our Programs: Unlock Your Full Potential
+      {/* Program Section Header */}
+      <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-teal-600 text-center mt-14  pt-12 mb-12 animate__animated animate__fadeIn ">
+        Our Programs: Unlock Your Full Potential 
       </h1>
-      
-      <div className="container flex flex-wrap gap-8 justify-center mt-8 px-4">
 
+      {/* Program Cards */}
+      <div className="container flex flex-wrap gap-8 justify-center mt-8 px-4">
         {/* Cardio Program */}
         <div className="max-w-sm rounded-xl shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
           <img className="w-full h-60 object-cover rounded-t-xl" src={img1} alt="Cardio" />
@@ -47,7 +47,6 @@ const Program = () => {
             </p>
           </div>
         </div>
-
       </div>
 
       {/* BMI Calculator Component */}
@@ -55,6 +54,8 @@ const Program = () => {
         <h2 className="text-center text-3xl font-bold text-white mb-8">Track Your Progress with Our BMI Calculator</h2>
         <BMICalculator />
       </div>
+      
+      {/* Pricing Section */}
       <Pricing/>
     </>
   );

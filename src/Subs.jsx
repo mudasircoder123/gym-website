@@ -43,7 +43,7 @@ const Pricing = () => {
           {/* Pro Plan */}
           <div className="relative p-8 border border-gray-300 rounded-2xl shadow-lg bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
             <h3 className="text-2xl font-semibold">Pro</h3>
-            <p className="absolute top-0 py-1.5 px-4 bg-emerald-500 text-white rounded-full text-xs font-semibold uppercase tracking-wide transform -translate-y-1/2">
+            <p className="absolute top-0 py-1.5 px-4 bg-emerald-500 text-white rounded-full text-lg font-semibold uppercase tracking-wide transform -translate-y-1/2">
               Most Popular
             </p>
             <p className="mt-4 flex items-baseline text-5xl font-extrabold tracking-tight">
