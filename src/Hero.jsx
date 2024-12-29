@@ -30,7 +30,7 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
           {/* Text Section */}
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-teal-500 leading-tight tracking-wider dark:text-white mt-5">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-teal-500 leading-tight tracking-wider dark:text-white mt-10">
               Unleash Your Inner Strength
               <br />
               <span className="text-white text-2xl sm:text-3xl mt-3">Join the Fitness Revolution</span>
