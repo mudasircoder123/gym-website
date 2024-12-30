@@ -19,7 +19,7 @@ const Nav = () => {
       <header className="bg-slate-800 text-white fixed top-0 left-0 w-full z-50 shadow-lg h-23 rounded-lg ">
         <nav className="flex justify-between items-center p-4 max-w-7xl mx-auto">
           {/* Logo */}
-          <div className="text-4xl font-bold text-teal-400 font-sans tracking-wider">
+          <div className="text-3xl font-bold text-teal-400 font-sans tracking-wider ">
             <Link to="/">The Fitness Connection.</Link>
           </div>
 
